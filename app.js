@@ -1,12 +1,12 @@
 const express = require("express");
 const app = express();
-const aboutPage = require("./aboutPage.js");
-const contactPage = require("./contactPage.js");
-const wishlistPage = require("./wishlistPage.js");
-const cartPage = require("./cartPage.js");
-const paymentPage = require("./paymentPage.js");
-const newoffersPage = require("./newoffersPage.js");
-const servicesPage = require("./servicesPage.js");
+const aboutPage = require("./routes/aboutPage.js");
+const contactPage = require("./routes/contactPage.js");
+const wishlistPage = require("./routes/wishlistPage.js");
+const cartPage = require("./routes/cartPage.js");
+const paymentPage = require("./routes/paymentPage.js");
+const newoffersPage = require("./routes/newoffersPage.js");
+const servicesPage = require("./routes/servicesPage.js");
 
 app.get("/", (request, response) => {
   response.send("Home Page");

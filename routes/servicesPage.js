@@ -44,6 +44,7 @@ router
 
 router.param("id", (request, response, next, id) => {
   console.log(id);
+  response.send((request.user = listOfservices[id]));
   request.user = listOfservices[id];
   next();
 });
