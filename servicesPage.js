@@ -3,47 +3,49 @@ const router = express.Router();
 
 let listOfservices = [
   {
-    id: 1,
     name: "Web Development",
   },
 
   {
-    id: 2,
     name: "Cloud Computing",
   },
 
   {
-    id: 3,
     name: "UI/UX Design",
   },
 
   {
-    id: 4,
     name: "Block Chain",
   },
 
   {
-    id: 5,
     name: "Digital Marketing",
   },
 
   {
-    id: 6,
     name: "Cyber Security",
   },
 ];
 
-router.get("/:id", (request, response) => {
-  const serviceId = Number(request.params.id);
-  const getService = listOfservices.find((service) => {
-    return service.id === serviceId;
+router
+  .route("/:id")
+  .get((request, response) => {
+    console.log(request.user);
+    response.send("Get method with " + request.params.id);
+  })
+
+  .put((request, response) => {
+    response.send("Update method with " + request.params.id);
+  })
+
+  .delete((request, response) => {
+    response.send("Delete method with " + request.params.id);
   });
 
-  if (!getService) {
-    response.status(500).send("Expected service not found");
-    console.log(request.params.id);
-  } else {
-    response.json(getService);
-  }
+router.param("id", (request, response, next, id) => {
+  console.log(id);
+  request.user = listOfservices[id];
+  next();
 });
+
 module.exports = router;
