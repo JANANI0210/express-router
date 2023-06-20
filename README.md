@@ -1,4 +1,4 @@
-# EX -1:EXPRESS ROUTERS & MIDDLEWARE
+# EXPRESS ROUTERS & MIDDLEWARE
 
 ### AIM :
       To Create an Express app that have 6-8 routes in a commercial website point-of-view.
@@ -118,6 +118,11 @@ services.js
 
 
  ### OUTPUT :
+
+   ![Screenshot (425)](https://github.com/JANANI0210/express-router/assets/86832944/77569bf1-314a-4e74-91f1-2379af44b6c0)
+   ![Screenshot (426)](https://github.com/JANANI0210/express-router/assets/86832944/0020d3ba-ee3d-46e2-9d7d-a6c6dc0c5d4c)
+
+
  
  ### RESULT :
             Thus,to create an Express app that have 6-8 routes in a commercial website point-of-view and Get a number as a URL (request) parameter,
